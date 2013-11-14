@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  duties: MyText
+  hourly_pay: 9.99
+  : 
+  : 
+  company_name: MyString
+  skills: MyText
+  desc: MyText
+  hours_per_week: 1
+  shift: MyString
+  contact_info: MyString
+
+two:
+  title: MyString
+  duties: MyText
+  hourly_pay: 9.99
+  : 
+  : 
+  company_name: MyString
+  skills: MyText
+  desc: MyText
+  hours_per_week: 1
+  shift: MyString
+  contact_info: MyString
