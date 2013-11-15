@@ -12,6 +12,11 @@ class JobsController < ApplicationController
     redirect_to @job
   end
   
+  def show
+    #the @job instance var is passed to the view
+    @job = Job.find(params[:id])
+  end
+  
   private 
     def post_params
       params.require(:post).permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :contact_info)
