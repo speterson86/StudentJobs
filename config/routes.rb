@@ -1,4 +1,10 @@
 StudentJobs::Application.routes.draw do
+  
+  jobs GET /jobs/:id(.:format) jobs#show
+  jobs GET /jobs/(.:format) jobs#index
+  
+  DELETE /jobs/:id(.:format)      jobs#destroy
+  
   get "jobs/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
