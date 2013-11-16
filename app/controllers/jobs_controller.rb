@@ -6,8 +6,7 @@ class JobsController < ApplicationController
   end
   
   def create
-    #render text: params[:post].inspect
-    @job = Job.new(post_params)
+    @job = Job.new(job_params)
     @job.save
     redirect_to @job
   end
@@ -18,7 +17,7 @@ class JobsController < ApplicationController
   end
   
   private 
-    def post_params
+    def job_params
       params.require(:post).permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :contact_info)
     end
 
