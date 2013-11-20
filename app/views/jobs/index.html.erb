@@ -5,13 +5,13 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Duties</th>
+    <th>Company Name</th>
   </tr>
  
   <% @jobs.each do |job| %>
     <tr>
       <td><%= job.title %></td>
-      <td><%= job.duties %></td>
+      <td><%= job.company_name %></td>
       <td><%= link_to 'Show', job %></td>
   </tr>
   <% end %>
