@@ -3,9 +3,7 @@
 one:
   title: MyString
   duties: MyText
-  hourly_pay: 9.99
-  : 
-  : 
+  hourly_pay: 9.99 
   company_name: MyString
   skills: MyText
   desc: MyText
@@ -17,8 +15,6 @@ two:
   title: MyString
   duties: MyText
   hourly_pay: 9.99
-  : 
-  : 
   company_name: MyString
   skills: MyText
   desc: MyText
