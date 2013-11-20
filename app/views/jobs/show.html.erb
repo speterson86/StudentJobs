@@ -1,9 +1,45 @@
 <p>
   <strong>Title:</strong>
-  <%= @job.title %>
+  <%= @job.title %><!--".title" is a property from 20131114194058_create_jobs.rb-->
+</p>
+
+<p>
+  <strong>Duties:</strong>
+  <%= @job.duties %>
+</p>
+
+<p>
+  <strong>Hourly Pay:</strong>
+  <%= @job.hourly_pay %>
+</p>
+
+<p>
+  <strong>Company Name:</strong>
+  <%= @job.company_name %>
+</p>
+
+<p>
+  <strong>Skill Requirements:</strong>
+  <%= @job.skills %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.desc %>
+</p>
+
+<p>
+  <strong>Hours Per Week:</strong>
+  <%= @job.hours_per_week %>
+</p>
+
+<p>
+  <strong>Shift:</strong>
+  <%= @job.shift %>
 </p>
 
 <p>
   <strong>Contact Info:</strong>
   <a href:"<%= @job.contact_info %>" target=" blank"><%= @job.company_name %></a>
 </p>
+
