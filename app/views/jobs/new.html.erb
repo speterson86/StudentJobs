@@ -11,6 +11,12 @@
     </ul>
   </div>
   <% end %>
+
+ <p>
+    <%= f.label :Company_Name %><br>
+    <%= f.text_field :company_name %>
+  </p>
+
   <p>
     <%= f.label :Job_Title %><br>
     <%= f.text_field :title %>
@@ -22,28 +28,13 @@
   </p>
 
   <p>
-    <%= f.label :Hourly_Pay %><br>
-    <%= f.text_field :hourly_pay %>
-  </p>
-
-  <p>
-    <%= f.label :Company_Name %><br>
-    <%= f.text_field :company_name %>
-  </p>
+    <%= f.label :Job_Description %><br>
+    <%= f.text_area :desc %>
+   </p>
 
   <p>
     <%= f.label :Skills %><br>
     <%= f.text_field :skills %>
-  </p>
-
-  <p>
-    <%= f.label :Job_Description %><br>
-    <%= f.text_area :desc %>
-  </p>
-
-  <p>
-    <%= f.label :Hours_Per_Week %><br>
-    <%= f.text_field :hours_per_week %>
   </p>
 
   <p>
@@ -52,8 +43,23 @@
   </p>
 
   <p>
-    <%= f.label :Contact_URL %><br>
-    <%= f.text_field :contact_info %>
+    <%= f.label :Hours_Per_Week %><br>
+    <%= f.text_field :hours_per_week %>
+  </p>
+
+  <p>
+    <%= f.label :Hourly_Pay %><br>
+    <%= f.text_field :hourly_pay %>
+  </p>
+
+  <p>
+    <%= f.label :Apply_For_Job %><br>
+    <%= f.text_field :company_website %>
+  </p>
+
+  <p>
+     <%= f.label :Contact_Info %><br>
+     <%= f.text_field :company_email %>
   </p>
 
   <p>
