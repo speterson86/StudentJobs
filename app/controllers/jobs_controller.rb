@@ -13,8 +13,10 @@ class JobsController < ApplicationController
     
     if @job.save
       redirect_to @job
+      flash[:notice] = "Job created; approval pending"
     else
       render 'new'
+      flash[:notice] = "Job not created"
     end
   end
   
