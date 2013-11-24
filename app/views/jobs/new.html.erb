@@ -1,5 +1,11 @@
 <h1>Create a new job post</h1>
 
+<% if flash[:notice] %>
+
+    <div class="notice"><%= flash[:notice] %></div>
+
+<% end %>
+
 <%= form_for :post, url: jobs_path do |f| %>
   <% if @job.errors.any? %>
   <div id="error-text">

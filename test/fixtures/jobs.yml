@@ -10,6 +10,7 @@ one:
   hours_per_week: 1
   shift: MyString
   contact_info: MyString
+  company_website: MyString
 
 two:
   title: MyString
@@ -21,3 +22,4 @@ two:
   hours_per_week: 1
   shift: MyString
   contact_info: MyString
+  company_website: MyString

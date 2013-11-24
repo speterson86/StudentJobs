@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+ class JobsController < ApplicationController
   
   def index
     @jobs = Job.all
@@ -13,8 +13,10 @@ class JobsController < ApplicationController
     
     if @job.save
       redirect_to @job
+      flash[:notice] = "Job created; approval pending"
     else
       render 'new'
+      flash[:notice] = "Job not created"
     end
   end
   

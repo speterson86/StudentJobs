@@ -8,4 +8,5 @@ class Job < ActiveRecord::Base
   validates :hours_per_week, numericality: true
   validates :shift, presence: true
   validates :contact_info, presence: true
+  validates :company_website, presence: true
 end
