@@ -44,11 +44,12 @@
 
 <p>
   <strong>Apply for Job:</strong>
-  <a href:"<%= @job.company_website %>" target=" blank"><%= @job.company_name %></a>
+  <%= link_to @job.company_name, url_with_protocol(@job.company_website) %>
 </p>
 
 <p>
   <strong>Contact Info:</strong>
+  <%= mail_to url_with_protocol(@job.company_email), @job.company_name, subject: @job.title + " post on AwesomeJobs.com" %>
 <p>
 
 <%= link_to 'Back', jobs_path %>

@@ -8,4 +8,5 @@ class Job < ActiveRecord::Base
   validates :hours_per_week, numericality: true
   validates :shift, presence: true
   validates :company_website, url: true
+  validates_format_of :email, :with => /@/
 end
