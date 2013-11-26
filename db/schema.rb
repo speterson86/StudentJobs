@@ -13,7 +13,22 @@
 
 ActiveRecord::Schema.define(version: 20131122212209) do
 
-# Could not dump table "jobs" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "jobs", force: true do |t|
+    t.string   "title"
+    t.text     "duties"
+    t.decimal  "hourly_pay",         precision: 4, scale: 2, default: 0.0
+    t.string   "company_name"
+    t.text     "skills"
+    t.text     "desc"
+    t.integer  "hours_per_week"
+    t.string   "shift"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "company_website"
+    t.boolean  "approve"
+    t.boolean  "reject"
+    t.text     "reject_description"
+  end
 
 end

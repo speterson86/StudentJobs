@@ -9,9 +9,6 @@ class CreateJobs < ActiveRecord::Migration
       t.text :desc
       t.integer :hours_per_week
       t.string :shift
-      t.string :company_website
-      t.string :company_email
-
       t.timestamps
     end
   end

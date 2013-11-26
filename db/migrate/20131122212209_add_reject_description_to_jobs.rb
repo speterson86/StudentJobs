@@ -1,5 +1,6 @@
 class AddRejectDescriptionToJobs < ActiveRecord::Migration
   def change
-    add_column :jobs, :reject_description, :text_area
+    add_column :jobs, :reject_description, :text
   end
+ 
 end
