@@ -20,6 +20,13 @@
     end
   end
   
+   #if admin is not logged in, only show approved jobs
+  #def edit
+   # @post = Post.find(params[:id])
+  #end
+   
+      
+   #else if admin is logged in, all jobs:
   def show
     @job = Job.find(params[:id])
   end
