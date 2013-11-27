@@ -51,7 +51,7 @@
 
 <p>
   <strong>Contact Info:</strong>
-  <%= mail_to url_with_protocol(@job.company_email), @job.company_name, subject: @job.title + " post on AwesomeJobs.com" %>
+  <%= mail_to url_with_protocol(@job.email), @job.company_name, subject: @job.title + " post on AwesomeJobs.com" %>
 <p>  
 
 <%= form_for :post, url: jobs_path do |f| %>  
