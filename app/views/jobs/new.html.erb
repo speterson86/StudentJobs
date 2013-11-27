@@ -1,6 +1,12 @@
+<% if current_user %>
+  <p>Welcome <%= current_user.username %></p>
+<% else %>
+  <p>Please log in.</p>
+<% end %>
+
 <h1>Create a new job post</h1>
 
-<% if flash[:notice] %>
+<% if flash[:notice] %><!--indicates "Job created; approval pending" or "Job not created"--> 
 
     <div class="notice"><%= flash[:notice] %></div>
 
