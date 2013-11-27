@@ -1,7 +1,9 @@
 <h1>Create a new job post</h1>
 
 <% if flash[:notice] %>
+
     <div class="notice"><%= flash[:notice] %></div>
+
 <% end %>
 
 <%= form_for :post, url: jobs_path do |f| %>
@@ -57,13 +59,13 @@
   </p>
 
   <p>
-    <%= f.label :Apply_For_Job %><br>
+    <%= f.label :company_website %><br>
     <%= f.text_field :company_website %>
   </p>
 
   <p>
-     <%= f.label :Contact_Info %><br>
-     <%= f.text_field :company_email %>
+     <%= f.label :email %><br>
+     <%= f.text_field :email %>
   </p>
 
   <p>

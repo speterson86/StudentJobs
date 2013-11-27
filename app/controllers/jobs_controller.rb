@@ -1,7 +1,7 @@
-class JobsController < ApplicationController
+ class JobsController < ApplicationController
   
   def index
-    @jobs = Job.all
+    @jobs = Job.all#fetch all jobs from controllers/jobs.rb
   end
   
   def new
@@ -26,7 +26,7 @@ class JobsController < ApplicationController
   
   private
   def job_params
-    params.require(:post).permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :company_website, :company_email)
+    params.require(:post).permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :company_website, :email)
   end
 
 end

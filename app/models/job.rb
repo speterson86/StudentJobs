@@ -1,3 +1,4 @@
+#the call "Job.all" will fetch all records, categorized under the attributes, provided by this "job.rb" file.
 class Job < ActiveRecord::Base
   validates :title, presence: true
   validates :duties, presence: true
@@ -8,5 +9,5 @@ class Job < ActiveRecord::Base
   validates :hours_per_week, numericality: true
   validates :shift, presence: true
   validates :company_website, url: true
-  validates_format_of :email, :with => /@/
+  validates_format_of :email, :with => /@/# a simple way to marginally validate an email address.  
 end
