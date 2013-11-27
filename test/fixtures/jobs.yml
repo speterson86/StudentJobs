@@ -10,10 +10,8 @@ one:
   desc: MyText
   hours_per_week: 1
   shift: MyString
-
-  contact_info: MyString
-
   company_website: MyString
+  email: MyString
 
 #two:
 #  title: MyString
