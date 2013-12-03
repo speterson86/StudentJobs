@@ -1,19 +1,22 @@
-<h1>Awesome Jobs</h1>
- 
-<%= link_to 'New Job', new_job_path %>
+<!DOCTYPE html>
+<html>
+  <header>
+    <h1>Awesome Jobs</h1>
+    <meta charset="utf=8">
+  </header>
+    <%= link_to 'New Job', new_job_path %>
 
-<table>
-  <tr>
-    <th>Title | </th>
-    <th>Company Name | </th>
-    <th>Go To Job Descripion</th>
-  </tr>
+  <section>
+      <h2>Title | </h2>
+      <h2>Company Name | </h2>
+      <h2>Go To Job Descripion</h2>
+   </section>
  
   <% @jobs.each do |job| %>
     <tr>
       <td><%= job.title %></td>
       <td><%= job.company_name %></td>
       <td><%= link_to 'Show', job %></td>
-  </tr>
+    </tr>
   <% end %>
-</table>
+</html>
