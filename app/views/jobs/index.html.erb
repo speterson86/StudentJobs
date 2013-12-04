@@ -3,20 +3,35 @@
   <header>
     <h1>Awesome Jobs</h1>
     <meta charset="utf=8">
+    <%= stylesheet_link_tag "awesomejobs.css" %>
   </header>
-    <%= link_to 'New Job', new_job_path %>
-
-  <section>
-      <h2>Title | </h2>
-      <h2>Company Name | </h2>
-      <h2>Go To Job Descripion</h2>
-   </section>
  
+<% if current_user %>
+  <p>Welcome <%= current_user.username %></p>
+<% else %>
+  <p>Please log in.</p>
+<% end %>
+ <nav> 
+   <%= link_to 'New Job', new_job_path %>
+ </nav>
+  <section>
+    <table>
+      <tr>
+        <h7>Title | </h7>
+        <h7>Company Name | </h7>
+        <h7>Go To Job Descripion </h7>
+      </tr>
+  
+  <!--if boolean show = true show te job:-->
   <% @jobs.each do |job| %>
     <tr>
       <td><%= job.title %></td>
       <td><%= job.company_name %></td>
+     <nav
       <td><%= link_to 'Show', job %></td>
+     </nav>
     </tr>
+  </table>
+ </section>
   <% end %>
 </html>

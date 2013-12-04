@@ -1,4 +1,21 @@
-<h1>Create a new job post</h1>
+<html>
+  <header>
+    <h1>Create a new job post</h1>
+    <meta charset="utf=8">
+    <%= stylesheet_link_tag "awesomejobs.css" %>
+  </header>
+
+<% if current_user %>
+  <p>Welcome <%= current_user.username %></p>
+<% else %>
+  <p>Please log in.</p>
+<% end %>
+
+<% if flash[:notice] %><!--indicates "Job created; approval pending" or "Job not created"--> 
+
+    <div class="notice"><%= flash[:notice] %></div>
+
+<% end %>
 
 <%= form_for :post, url: jobs_path do |f| %>
   <% if @job.errors.any? %>
@@ -13,53 +30,53 @@
   <% end %>
 
  <p>
-    <%= f.label :Company_Name %><br>
+    <h7><%= f.label :Company_Name %></h7><br>
     <%= f.text_field :company_name %>
   </p>
 
   <p>
-    <%= f.label :Job_Title %><br>
+    <h7><%= f.label :Job_Title %></h7><br>
     <%= f.text_field :title %>
   </p>
 
   <p>
-    <%= f.label :Job_Duties %><br>
+    <h7><%= f.label :Job_Duties %></h7><br>
     <%= f.text_area :duties %>
   </p>
 
   <p>
-    <%= f.label :Job_Description %><br>
+    <h7><%= f.label :Job_Description %></h7><br>
     <%= f.text_area :desc %>
    </p>
 
   <p>
-    <%= f.label :Skills %><br>
+    <h7><%= f.label :Skills %></h7><br>
     <%= f.text_field :skills %>
   </p>
 
   <p>
-    <%= f.label :Shift %><br>
+    <h7><%= f.label :Shift %></h7><br>
     <%= f.text_field :shift %>
   </p>
 
   <p>
-    <%= f.label :Hours_Per_Week %><br>
+    <h7><%= f.label :Hours_Per_Week %></h7><br>
     <%= f.text_field :hours_per_week %>
   </p>
 
   <p>
-    <%= f.label :Hourly_Pay %><br>
+    <h7><%= f.label :Hourly_Pay %></h7><br>
     <%= f.text_field :hourly_pay %>
   </p>
 
   <p>
-    <%= f.label :Apply_For_Job %><br>
+    <h7><%= f.label :company_website %></h7><br>
     <%= f.text_field :company_website %>
   </p>
 
   <p>
-     <%= f.label :Contact_Info %><br>
-     <%= f.text_field :company_email %>
+    <h7><%= f.label :email %></h7><br>
+     <%= f.text_field :email %>
   </p>
 
   <p>
@@ -68,3 +85,5 @@
 <% end %>
 
 <%= link_to 'Back', jobs_path %>
+
+</html>

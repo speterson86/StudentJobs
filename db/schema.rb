@@ -11,19 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114194058) do
+ActiveRecord::Schema.define(version: 20131127215045) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
     t.text     "duties"
-    t.decimal  "hourly_pay",      precision: 4, scale: 2, default: 0.0
+    t.decimal  "hourly_pay",         precision: 4, scale: 2, default: 0.0
     t.string   "company_name"
     t.text     "skills"
     t.text     "desc"
     t.integer  "hours_per_week"
     t.string   "shift"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
     t.string   "company_website"
-    t.string   "company_email"
+    t.boolean  "approve"
+    t.boolean  "reject"
+    t.text     "reject_description"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

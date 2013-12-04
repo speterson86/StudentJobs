@@ -1,51 +1,98 @@
+<html>
+  <header>
+    <h1>Job Results</h1>
+    <meta charset="utf=8">
+    <%= stylesheet_link_tag "awesomejobs.css" %>
+  </header>
+
+<% if current_user %>
+  <p>Welcome <%= current_user.username %></p>
+<% else %>
+  <p>Please log in.</p>
+<% end %>
+
+<% if flash[:notice] %>
+
+  <div class="notice"><%= flash[:notice] %></div>
+
+<% end %>
+
 <p>
-  <strong>Company Name:</strong>
+  <h7>Company Name:<h7>
   <%= @job.company_name %>
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <h7>Title:</h7>
   <%= @job.title %><!--".title" is a property from 20131114194058_create_jobs.rb-->
 </p>
 
 <p>
-  <strong>Job Duties:</strong>
+  <h7>Job Duties:</h7>
   <%= @job.duties %>
 </p>
 
 <p>
-  <strong>Job Description:</strong>
+  <h7>Job Description:</h7>
   <%= @job.desc %>
 </p>
 
 <p>
-  <strong>Skill Requirements:</strong>
+  <h7>Skill Requirements:</h7>
   <%= @job.skills %>
 </p>
 
 <p>
-  <strong>Shift:</strong>
+  <h7>Shift:</h7>
   <%= @job.shift %>
 </p>
 
 <p>
-  <strong>Hours Per Week:</strong>
+  <h7>Hours Per Week:</h7>
   <%= @job.hours_per_week %>
 </p>
 
 <p>
-  <strong>Hourly Pay:</strong>
+  <h7>Hourly Pay:</h7>
   <%= @job.hourly_pay %>
 </p>
 
 <p>
-  <strong>Apply for Job:</strong>
+  <h7>Apply for Job:</h7>
   <a href:"<%= @job.company_website %>" target=" blank"><%= @job.company_name %></a>
 </p>
 
 <p>
-  <strong>Contact Info:</strong>
+  <h7>Contact Info:</h7>
+<p>  
+
 <p>
+  <h7>Accept Job?</h7>
+<p>
+  <%= form_for :post, url: jobs_path do |f| %>
+  
+  <%= f.radio_button :accept, true %><%= f.label :yes %><br />
+<%= f.radio_button :accept, false %><%= f.label :no %>  
+
+  <!--WHEN A RADIO BUTTON IS SELECTED, DO ON OF THE FOLLOWING UPON CLICK OF THE "OK" BUTTON:-->
+  <!--if radio button "yes" is selected, add the job to the list in index.html.erb-->
+  <!--else-if radio button "no" is selected, do not add the job to index.html.rb (and clear the form?)-->
+<p>
+  <h7>Reason for Rejecting:</h7><br>
+  <%= f.text_area :reject_description %>  <!--if null, give the admin an error message.-->
+</p>
+
+<!--
+use a boolean flag
+*before_create callback, set approval to:""
+*force default value to be false?
+-->
+<button name="btnApprove" type="button">
+  <strong>Ok</strong>
+</button>
+
+<% end %>
 
 <%= link_to 'Back', jobs_path %>
-
+  
+</html>

@@ -1,4 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# This file Puts info in the test db when rake test is run.
 
 one:
   title: MyString
@@ -9,15 +10,20 @@ one:
   desc: MyText
   hours_per_week: 1
   shift: MyString
-  contact_info: MyString
+  company_website: MyString
+  email: MyString
 
-two:
-  title: MyString
-  duties: MyText
-  hourly_pay: 9.99
-  company_name: MyString
-  skills: MyText
-  desc: MyText
-  hours_per_week: 1
-  shift: MyString
-  contact_info: MyString
+#two:
+#  title: MyString
+#  duties: MyText
+#  hourly_pay: 9.99
+#  company_name: MyString
+#  skills: MyText
+#  desc: MyText
+#  hours_per_week: 1
+#  shift: MyString
+#<<<<<<< HEAD
+#  contact_info: MyString
+#=======
+#>>>>>>> a8ef95e9c1668420a13224f4ef1adf14efd08b95
+#  company_website: MyString
