@@ -1,0 +1,41 @@
+html {
+  background-color: #FFFFFF;
+  min-height: 400px;
+  min-width: 300px;
+  padding-left: 200px;
+  
+  width: 60%;
+  
+}        
+
+header {
+  background-color: #669EDC;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+h1 {
+     color: #40648B;
+}
+
+a:link {color:#3573B9;
+        background-color: #114279;}    /* unvisited link */
+a:visited {color:#3573B9;} /* visited link */
+a:hover {color:#114279;
+         background-color: #3573B9;}   /* mouse over link */
+a:active {color:#3573B9;}  /* selected link */
+
+h7 {
+       color: #669EDC;
+}
+
+#about h2 {
+  text-align: center;
+  padding-top: 15px;
+}
+footer {
+  clear: both;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
