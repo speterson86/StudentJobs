@@ -1,5 +1,5 @@
  class JobsController < ApplicationController
-   before_filter :authenticate_user, except: [:index, :new]#use only on controller that we want to protect.
+   before_filter :authenticate_user, except: [:index, :new, :show]#use only on controller that we want to protect.
   def index
     @jobs = Job.all#fetch all jobs from controllers/jobs.rb
   end
