@@ -5,15 +5,17 @@
     <meta charset="utf=8">
     <%= stylesheet_link_tag "awesomejobs.css" %>
   </header>
- 
-<% if current_user %>
-  <p>Welcome <%= current_user.username %></p>
-<% else %>
-  <p>Please log in.</p>
-<% end %>
+  
+ <body>
+    <% if current_user %>
+      <p>Welcome <%= current_user.username %></p>
+    <% else %>
+      <p>Please log in.</p>
+    <% end %>
  <nav> 
    <%= link_to 'New Job', new_job_path %>
  </nav>
+   
   <section>
     <table>
       <tr>
@@ -30,6 +32,7 @@
         <td><%= link_to 'Show', job %></td>
       </tr>
     <% end %>
-    </table>
- </section>
+   </table>   
+  </section>
+ </body>
 </html>
