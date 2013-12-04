@@ -2,6 +2,7 @@
    before_filter :authenticate_user, except: [:index, :new]#use only on controller that we want to protect.
   def index
     @jobs = Job.all#fetch all jobs from controllers/jobs.rb
+    #@jobs = Job.where :approve => true#fetch jobs that the admin approved from controllers/jobs.rb
   end
   
   def new

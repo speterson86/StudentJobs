@@ -63,13 +63,18 @@
   <strong>Accept Job?</strong>
 <p>
   <%= form_for :post, url: jobs_path do |f| %>
+<!--  
+<!--<%= f.radio_button :accept, true %><%= f.label :yes %><br />
+<!--<%= f.radio_button :accept, false %><%= f.label :no %>  
+-->
+  <%= radio_button_tag(:yes, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:no, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
   
-  <%= f.radio_button :accept, true %><%= f.label :yes %><br />
-<%= f.radio_button :accept, false %><%= f.label :no %>  
-
   <!--WHEN A RADIO BUTTON IS SELECTED, DO ON OF THE FOLLOWING UPON CLICK OF THE "OK" BUTTON:-->
-  <!--if radio button "yes" is selected, add the job to the list in index.html.erb-->
-  <!--else-if radio button "no" is selected, do not add the job to index.html.rb (and clear the form?)-->
+  <!--if radio button "yes" is selected, set the boolean show flag to 2, and add the job to the list in index.html.erb-->
+  <!--else-if radio button "no" is selected, leave the default boolean show flag, and do not add the job to index.html.rb-->
 <p>
   <strong>Reason for Rejecting:</strong><br>
   <%= f.text_area :reject_description %>  <!--if null, give the admin an error message.-->
@@ -77,7 +82,7 @@
 
 <!--
 use a boolean flag
-*before_create callback, set approval to:""
+*before_create callback, set approval to:"" :default => 1
 *force default value to be false?
 -->
 <button name="btnApprove" type="button">
