@@ -17,21 +17,19 @@
   <section>
     <table>
       <tr>
-        <h7>Title | </h7>
-        <h7>Company Name | </h7>
-        <h7>Go To Job Descripion </h7>
+        <td><h7>Title | </h7></td>
+        <td><h7>Company Name | </h7></td>
+        <td><h7>Go To Job Descripion </h7></td>
       </tr>
   
   <!--if boolean show = true show te job:-->
-  <% @jobs.each do |job| %>
-    <tr>
-      <td><%= job.title %></td>
-      <td><%= job.company_name %></td>
-     <nav
-      <td><%= link_to 'Show', job %></td>
-     </nav>
-    </tr>
-  </table>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.company_name %></td>
+        <td><%= link_to 'Show', job %></td>
+      </tr>
+    <% end %>
+    </table>
  </section>
-  <% end %> 
 </html>
