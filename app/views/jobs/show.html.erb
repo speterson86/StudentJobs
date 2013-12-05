@@ -70,16 +70,13 @@
   <h7>Accept Job?</h7>
 <p>
   <%= form_for :post, url: jobs_path do |f| %>
-<!--  
-<!--<%= f.radio_button :accept, true %><%= f.label :yes %><br />
-<!--<%= f.radio_button :accept, false %><%= f.label :no %>  
--->
-  <%= radio_button_tag(:yes, "child") %>
-<%= label_tag(:age_child, "I am younger than 21") %>
-<%= radio_button_tag(:no, "adult") %>
-<%= label_tag(:age_adult, "I'm over 21") %>
+
+<%= f.radio_button :accept, true %><!--auto generated id = "accept_true"-->
+<%= f.label :yes %><br />
+<%= f.radio_button :accept, false %><!--auto generated id = "accept_false"-->
+<%= f.label :no %>  
   
-  <!--WHEN A RADIO BUTTON IS SELECTED, DO ON OF THE FOLLOWING UPON CLICK OF THE "OK" BUTTON:-->
+  <!--WHEN A RADIO BUTTON IS SELECTED, DO ONE OF THE FOLLOWING UPON CLICK OF THE "OK" BUTTON:-->
   <!--if radio button "yes" is selected, set the boolean show flag to 2, and add the job to the list in index.html.erb-->
   <!--else-if radio button "no" is selected, leave the default boolean show flag, and do not add the job to index.html.rb-->
 <p>
@@ -87,12 +84,8 @@
   <%= f.text_area :reject_description %>  <!--if null, give the admin an error message.-->
 </p>
 
-<!--
-use a boolean flag
-*before_create callback, set approval to:"" :default => 1
-*force default value to be false?
--->
-<button name="btnApprove" type="button">
+
+<button name="btnApprove" type="submit">
   <strong>Ok</strong>
 </button>
 
