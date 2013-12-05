@@ -2,12 +2,12 @@
 $(function() {
     $('reject_description').hide();
 
-    $('#yes_noShow').click(function() {console.log("yes selected, do not show.");
-        $("#post_reject_description").hide();
+    $('#job_approve_true').click(function() {console.log("yes selected, do not show.");
+        $("#job_reject_description").hide();
     });
   
-    $('#no_yesShow').click(function() {console.log("no selected, show and prompt admin to fill in explaination.");
-        $("#post_reject_description").show();
+    $('#job_approve_false').click(function() {console.log("no selected, show and prompt admin to fill in explaination.");
+        $("#job_reject_description").show();
     });
 
     
