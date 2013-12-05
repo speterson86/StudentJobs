@@ -5,12 +5,6 @@
     <%= stylesheet_link_tag "awesomejobs.css" %>
   </header>
 
-<% if current_user %>
-  <p>Welcome <%= current_user.username %></p>
-<% else %>
-  <p>Please log in.</p>
-<% end %>
-
 <% if flash[:notice] %><!--indicates "Job created; approval pending" or "Job not created"--> 
 
     <div class="notice"><%= flash[:notice] %></div>
