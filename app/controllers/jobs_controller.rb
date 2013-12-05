@@ -18,17 +18,25 @@
       render 'new'
       flash[:notice] = "Job not created"
     end
-  end
-  
-   #if admin is not logged in, only show approved jobs
-  #def edit
-   # @post = Post.find(params[:id])
-  #end
-   
+  end 
       
    #else if admin is logged in, all jobs:
   def show
     @job = Job.find(params[:id])
+  end
+   
+  def edit
+    @job = Job.find(params[:id])
+  end
+  
+  def update
+  @job = Job.find(params[:id])
+ 
+    if @job.update_attributes(params[:post].permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :company_website, :email))
+      redirect_to @job
+    else
+      render 'edit'
+    end
   end
   
   private
