@@ -1,17 +1,12 @@
 <html>
   <header>
-    <h1>Create a new job post</h1>
+    <h1>Edit a job post</h1>
     <meta charset="utf=8">
     <%= stylesheet_link_tag "awesomejobs.css" %>
   </header>
 
-<% if flash[:notice] %><!--indicates "Job created; approval pending" or "Job not created"--> 
-
-    <div class="notice"><%= flash[:notice] %></div>
-
-<% end %>
-
-<%= form_for @job do |f| %>
+  <%= form_for(@job) do |f| %>
+  
   <% if @job.errors.any? %>
   <div id="error-text">
     <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
@@ -25,52 +20,52 @@
 
  <p>
     <h7><%= f.label :Company_Name %></h7><br>
-    <%= f.text_field :company_name %>
+   <%= f.text_field :company_name, value: @job.company_name %>
   </p>
 
   <p>
     <h7><%= f.label :Job_Title %></h7><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, value: @job.title %>
   </p>
 
   <p>
     <h7><%= f.label :Job_Duties %></h7><br>
-    <%= f.text_area :duties %>
+    <%= f.text_area :duties, value: @job.duties %>
   </p>
 
   <p>
     <h7><%= f.label :Job_Description %></h7><br>
-    <%= f.text_area :desc %>
+    <%= f.text_area :desc, value: @job.desc %>
    </p>
 
   <p>
     <h7><%= f.label :Skills %></h7><br>
-    <%= f.text_field :skills %>
+    <%= f.text_field :skills, value: @job.skills %>
   </p>
 
   <p>
     <h7><%= f.label :Shift %></h7><br>
-    <%= f.text_field :shift %>
+    <%= f.text_field :shift, value: @job.shift %>
   </p>
 
   <p>
     <h7><%= f.label :Hours_Per_Week %></h7><br>
-    <%= f.text_field :hours_per_week %>
+    <%= f.text_field :hours_per_week, value: @job.hours_per_week %>
   </p>
 
   <p>
     <h7><%= f.label :Hourly_Pay %></h7><br>
-    <%= f.text_field :hourly_pay %>
+    <%= f.text_field :hourly_pay, value: @job.hourly_pay %>
   </p>
 
   <p>
     <h7><%= f.label :company_website %></h7><br>
-    <%= f.text_field :company_website %>
+    <%= f.text_field :company_website, value: @job.company_website %>
   </p>
 
   <p>
     <h7><%= f.label :email %></h7><br>
-     <%= f.text_field :email %>
+     <%= f.text_field :email, value: @job.email %>
   </p>
 
   <p>

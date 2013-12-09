@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131204003051) do
+ActiveRecord::Schema.define(version: 20131203211529) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -26,9 +26,13 @@ ActiveRecord::Schema.define(version: 20131204003051) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "company_website"
+<<<<<<< HEAD
     t.boolean  "approve",                                    default: false
+=======
+>>>>>>> master
     t.boolean  "reject"
     t.text     "reject_description"
+    t.boolean  "approve",                                    default: false
   end
 
   create_table "users", force: true do |t|
