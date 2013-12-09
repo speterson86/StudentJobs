@@ -12,6 +12,7 @@
         <td><h7>Title | </h7></td>
         <td><h7>Company Name | </h7></td>
         <td><h7>Go To Job Description </h7></td>
+        <td><h7>Approved?</h7></td>
       </tr>
   
   <!--if boolean show = true show the job:-->
@@ -20,6 +21,7 @@
         <td><%= job.title %></td>
         <td><%= job.company_name %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= job.approve %></td>
       </tr>
     <% end %>
     </table>
