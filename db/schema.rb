@@ -26,10 +26,6 @@ ActiveRecord::Schema.define(version: 20131203211529) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "company_website"
-<<<<<<< HEAD
-    t.boolean  "approve",                                    default: false
-=======
->>>>>>> master
     t.boolean  "reject"
     t.text     "reject_description"
     t.boolean  "approve",                                    default: false
