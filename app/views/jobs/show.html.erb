@@ -5,16 +5,16 @@
     <%= stylesheet_link_tag "awesomejobs.css" %>
   </header>
 
-<% if flash[:notice] %>
+  <% if flash[:notice] %>
 
-  <div class="notice"><%= flash[:notice] %></div>
+    <div class="notice"><%= flash[:notice] %></div>
 
-<% end %>
+  <% end %>
 
-<p>
-  <h7>Company Name:<h7>
-  <%= @job.company_name %>
-</p>
+  <p>
+    <h7>Company Name:<h7>
+    <%= @job.company_name %>
+  </p>
 
 <p>
   <h7>Title:</h7>
