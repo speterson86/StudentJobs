@@ -31,7 +31,7 @@ class JobsController < ApplicationController
   
   def update
     @job = Job.find(params[:id])
-    #if @job.update_attributes(params[:post].permit(:title, :duties, :hourly_pay, :company_name, :skills, :desc, :hours_per_week, :shift, :company_website, :email))
+    
     if @job.update_attributes(admin_update_params)
       redirect_to admin_index_url
     else

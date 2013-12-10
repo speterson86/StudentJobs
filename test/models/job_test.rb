@@ -84,7 +84,24 @@ class JobTest < ActiveSupport::TestCase
                      :company_name => "abc", :skills => "abc", :desc => "abc",
                      :hours_per_week => 1, :shift => "abc",
                      :company_website => "http://abc.com", :email => "abc@abc.com",
-                     :reject => true, :approve => true)
+                     :approve => true)
+  end
+  
+  test "update job flips flags" do
+    job = Job.create :title => "abc", :duties => "abc", :hourly_pay => 2.99,
+                     :company_name => "abc", :skills => "abc", :desc => "abc",
+                     :hours_per_week => 1, :shift => "abc",
+                     :company_website => "http://abc.com", :email => "abc@abc.com",
+                     :reject => true, :approve => false
+    
+    job.update(:title => "abc", :duties => "abc", :hourly_pay => 2.99,
+                     :company_name => "abc", :skills => "abc", :desc => "abc",
+                     :hours_per_week => 1, :shift => "abc",
+                     :company_website => "http://abc.com", :email => "abc@abc.com",
+                     :approve => true)
+    
+    assert !job.reject?
+
   end
     
 end
