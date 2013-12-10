@@ -48,11 +48,18 @@ a:hover {
   color:#07213F;}   /* mouse over link */
 
 a:active {
-  color:#99C9FF;}  /* selected link */
+  color:#A4CFFF;}  /* selected link */
 
 h7 {
   color: #024188;
 }
+
+approve {color: #108C10;
+}
+
+rejected {color: #A61212;
+}
+
 
 
 
