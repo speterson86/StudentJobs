@@ -13,13 +13,13 @@ class Job < ActiveRecord::Base
   validates_format_of :email, :with => /@/# a simple way to marginally validate an email address.
   
   before_update :flip_flags
-  
+ 
   private
   def flip_flags
     if self.approve?
       self.reject = false
-    elsif self.reject?
-      self.approve = false
+    else
+      self.reject = true
     end
     true
   end

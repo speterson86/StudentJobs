@@ -72,9 +72,9 @@
     <h7>Accept Job?</h7>
   <p>
 
-  <%= f.radio_button :approve, true %><!--auto generated id = "approve_true"-->
+  <%= f.radio_button :approve, true, :checked => true %><!--auto generated id = "approve_true"-->
   <%= f.label :yes %><br />
-  <%= f.radio_button :reject, true %><!--auto generated id = "reject_true"-->
+  <%= f.radio_button :approve, false %><!--auto generated id = "reject_true"-->
   <%= f.label :no %>  
 
   <!--WHEN A RADIO BUTTON IS SELECTED, DO ONE OF THE FOLLOWING UPON CLICK OF THE "OK" BUTTON:-->
