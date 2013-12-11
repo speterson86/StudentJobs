@@ -11,15 +11,30 @@
       <tr>
         <td><h7>Title | </h7></td>
         <td><h7>Company Name | </h7></td>
-        <td><h7>Go To Job Description </h7></td>
+        <td><h7>Go To Job Description | </h7></td>
+        <td><h7>Status</h7></td>
       </tr>
   
   <!--if boolean show = true show the job:-->
     <% @jobs.each do |job| %>
+      <% if job.approve %>
+      <tr class="approve">
+      <% elsif job.reject %>
+      <tr class="reject">
+      <% else %>
+      <tr class="review">
+   <% end %>
       <tr>
         <td><%= job.title %></td>
         <td><%= job.company_name %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <% if job.approve %>
+        <td>Approved</td>
+        <% elsif job.reject %>
+        <td>Rejected</td>
+        <% else %>
+        <td>Not Reviewed</td>
+        <% end %>
       </tr>
     <% end %>
     </table>

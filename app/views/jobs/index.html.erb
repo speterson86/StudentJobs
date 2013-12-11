@@ -7,11 +7,6 @@
   </header>
   
  <body>
-    <% if current_user %>
-      <p>Welcome <%= current_user.username %></p>
-    <% else %>
-      <p>Please log in.</p>
-    <% end %>
    
  <nav> 
    <%= link_to 'New Job', new_job_path %>

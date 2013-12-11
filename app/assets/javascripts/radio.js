@@ -9,6 +9,5 @@ $(function() {
     $('#job_approve_false').click(function() {console.log("no selected, show and prompt admin to fill in explaination.");
         $("#job_reject_description").show();
     });
-
     
 });
